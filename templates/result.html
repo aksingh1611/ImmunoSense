@@ -1,0 +1,52 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        {% if prediction_text %}
+        <div class="result">
+            <p>Immunity Index: <span>{{ immunity_index }}</span></p>
+            <div class="guidance-box">
+                <p>{{ prediction_text }}</p>
+            </div>
+        </div>
+        {% endif %}
+        <button onclick="window.location.href='/';">Home</button>
+        <button onclick="window.location.href='/prediction';">Prediction Page</button>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        {% if prediction_text %}
+        <div class="result">
+            <p>Immunity Index: <span>{{ immunity_index }}</span></p>
+            <div class="guidance-box">
+                <p>{{ prediction_text }}</p>
+            </div>
+        </div>
+        {% endif %}
+        <button onclick="window.location.href='/';">Home</button>
+        <button onclick="window.location.href='/prediction';">Prediction Page</button>
+        <!-- Dashboard ka link -->
+        <button onclick="window.location.href='/dashboard';">Dashboard</button>
+    </div>
+</body>
+</html>

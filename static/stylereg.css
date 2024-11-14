@@ -1,0 +1,143 @@
+body {
+    background-color: rgb(10, 95, 151);
+    background-image: url('/static/b.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+
+form{
+    width: 500px;
+    height: 450px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -10px;
+    left: 870px;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 150px;
+    margin-left: -400px;
+}
+
+.main{
+    width: 100%;
+    height: 80%;
+    }
+    
+
+.imgcontainer {
+    text-align: center;
+    /*border-radius: 500%;*/
+    margin: 20px 12px;
+}
+
+p {
+    font-family: Open Sans;
+    color: black;
+    font-family: cursive;
+}
+
+button {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+}
+
+button:hover {
+    opacity: 0.52;
+}
+
+.cursor--moved {
+    top: 231px;
+    left: 1036px;
+    /* Add any other cursor moved styling here */
+}
+
+
+.cancelbtn {
+    color: white;
+    /* Add any cancelbtn class styling here */
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    color: #fff; /* Text color */
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+input[type="checkbox"]::placeholder {
+    color: #ccc; /* Placeholder text color */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-bottom: 2px solid #fff; /* Change border color on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #f8efef; /* Change background color on hover */
+}
+
+label {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.cancelbtn {
+    background-color: #f44336; /* Red background color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cancelbtn:hover {
+    background-color: #d32f2f; /* Dark red background color on hover */
+}
+
+.Password a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.Password a:hover {
+    text-decoration: underline;
+    margin-top: 40px;
+}
+
+.Password{
+    margin-top: 40px;
+}

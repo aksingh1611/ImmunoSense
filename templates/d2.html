@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Prediction Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='d2.css') }}">
+
+    
+
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="{{ url_for('index') }}">HOME</a></li>
+            <li><a href="{{ url_for('profile') }}">PROFILE</a></li>
+            <li><a href="{{ url_for('prediction') }}">PREDICTION</a></li>
+            <li><a href="{{ url_for('index') }}">LOGOUT</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>User Prediction Dashboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Immunity Index</th>
+                    <th>Prediction Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prediction in predictions %}
+                <tr>
+                    <td>{{ prediction.email }}</td>
+                    <td>{{ prediction.immunity_index }}</td>
+                    <td>{{ prediction.prediction_date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <canvas id="immunityChart" width="800" height="400"></canvas>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var predictions = JSON.parse('{{ predictions | tojson | safe }}');
+            var dates = predictions.map(prediction => new Date(prediction.prediction_date));
+            var immunityIndex = predictions.map(prediction => prediction.immunity_index);
+
+            var ctx = document.getElementById('immunityChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Immunity Index',
+                        data: immunityIndex,
+                        fill: false,
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'day'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

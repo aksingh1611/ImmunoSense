@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/prediction">Prediction</a></li>
+            <li><a href="/index">Home</a></li>
+            <li><a href="/index">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="user-details">
+            <p><strong>Email:</strong> <span id="email">{{ users.email }}</span></p>
+            <p><strong>First Name:</strong> <span id="firstName">{{ users.FirstName }}</span></p>
+            <p><strong>Last Name:</strong> <span id="lastName">{{ users.LastName }}</span></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set user details provided by Flask
+            const userEmail = "{{ users.email }}";
+            const userFirstName = "{{ users.FirstName }}";
+            const userLastName = "{{ users.LastName }}";
+
+            // Update user details in the profile page
+            document.getElementById('email').innerText = usersEmail;
+            document.getElementById('firstName').innerText = usersFirstName;
+            document.getElementById('lastName').innerText = usersLastName;
+        });
+    </script>
+</body>
+</html>

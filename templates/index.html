@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dietary Impact On Immune System</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1); // Remove the '#' character
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+        </script>
+</head>
+<body>
+  <div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a class="nav" href="#main">HOME</a></li>
+                <li><a class="nav" href="#about">ABOUT</a></li>
+                <li><a class="nav" href="#service">SERVICE</a></li>
+                <li><a class="nav" href="#guidance">GUIDANCE</a></li>
+                <!-- <li><a href="dashboard.html">DASHBOARD</a></li> -->
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <!--<div class="search">
+            <input class="srch" type="search" name="" placeholder="Type To Text">
+            <a href="#"><button class="btn">Search</button></a>
+        </div>-->
+    </div>
+    <div class="content">
+        <h1>Dietary<br><span>Impact On</span><br>Immune System</h1>
+        <p class="par">A balanced diet with fruits, vegetables, and lean proteins supports the immune system. <br>
+            Prioritize hydration, maintain a healthy gut, and ensure sufficient vitamin D <br>
+            intake for overall immune health. Limit processed foods <br>
+            to optimize immune function.
+             </p>
+            <button class="cn"><a href="#" >TRY IT</a></button>
+            <div class="form">
+                <h2>Login Here</h2>
+                <form action="/login" method="POST" align="center">
+                <input type="email" name="email" placeholder="Enter Email Here">
+                <input type="password" name="password" placeholder="Enter password Here">
+                <button class="btnn">Login</a></button>
+                </form>
+                <p class="link">Don't have an account<br>
+                <a href="/register">Sign up here</a></p> 
+                <p class="liw">Log in with</p>
+        <div class="icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+        </div>
+
+    </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+<div class="about" id="about">
+    <h1 class="heading"><span>About</span> Us</h1>
+    <div class="row">
+        <div class="image">
+            <!-- <img src="milkshake-8323288_1280.webp" alt=""> -->
+            <img src="{{ url_for('static', filename='milkshake-8323288_1280.webp') }}">
+        </div>
+        <div class="content1">
+            <div class="content-wrap">
+                <h3>Our Goals</h3>
+                <p>We are dedicated to revolutionizing the way people understand and improve their immune health. Our primary objectives include:</p>
+                <br><br>
+                <p>
+                    Providing accurate and reliable predictions of individual immunity levels.
+                    <br>
+                    Offering personalized recommendations for enhancing immune function based on predictive analysis.
+                    <br>
+                    Empowering individuals to make informed decisions about their health and well-being.
+                    <br>
+                    Contributing to ongoing research and advancements in the field of immune system analysis.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
+<div class="container1" id="service">
+<div id="service-section">
+    <h2>Services</h2>
+    <p id="paragraph">Enhancing Immune Health through Personalized Assessment and Recommendations</p>
+    <div class="cards">
+        <div class="card">
+            <div class="content">
+                <h3>Immune Health Assessment</h3>
+                <p>
+                    Comprehensive assessment of users' immune health
+                    based on various factors such as lifestyle,
+                    medical  history, nutritional habits, and 
+                    environmental exposures.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <br>
+                <h3>Personalized Recommendations</h3>
+                <p>
+                    Provide personalized recommendations and action plans to help users optimize their immune health. This could include dietary recommendations, lifestyle modifications, stress management techniques etc.
+                </p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="content">
+                <h3>Predictive Analysis and Risk Assessment</h3>
+                <p>
+                    Utilize predictive analytics and machine learning algorithms to assess users' susceptibility to certain illnesses or diseases based on their immune system parameters.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- guidance page -->
+<header>
+<h1>Guidance</h1>
+</header>
+
+<section class="main-content" id="guidance">
+<div class="container">
+    <h2>Welcome to Our Guidance Page</h2>
+    <p>Here you'll find all the information you need to make the most out of our immunity prediction platform. Whether you're new to the platform or looking for tips on how to optimize your immune health, we've got you covered.</p>
+
+    <h3>How to Get Started</h3>
+    <p>Getting started with our platform is easy. Simply create an account, complete our immune health assessment, and gain access to personalized recommendations tailored to your unique health profile.</p>
+
+    <h3>Understanding Your Results</h3>
+    <p>Our platform provides comprehensive insights into your immune health based on various factors such as lifestyle, medical history, and environmental exposures. Learn how to interpret your assessment results and identify areas for improvement.</p>
+
+    <h3>Personalized Recommendations</h3>
+    <p>Receive personalized recommendations designed to help you optimize your immune health. From dietary advice to lifestyle modifications, our recommendations are tailored to your specific needs and goals.</p>
+
+    <h3>Tips for Immune Health</h3>
+    <p>Discover practical tips and strategies for maintaining a healthy immune system. From nutrition tips to stress management techniques, we'll provide you with the tools you need to strengthen your immune system and reduce your risk of illness.</p>
+
+    <h3>Contact Us</h3>
+    <p>If you have any further questions or need assistance, feel free to reach out to our customer support team. We're here to help!</p>
+</div>
+</section>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>
